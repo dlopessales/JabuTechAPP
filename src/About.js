@@ -3,20 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom'
 
-class App extends Component {
-  render() {
+class Sobre extends Component {
+ render() {
     return (
-      <div className="App">
+        <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome</h1>
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">About</h1>
         </header>
         <p className="App-intro">
-          <Link to="/about">About</Link>
+        <Link to="/">Home</Link>
         </p>
-      </div>
+        </div>
     );
-  }
-}
+ }
 
-export default App;
+}
+export default Sobre;
