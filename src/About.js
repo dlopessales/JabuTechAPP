@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom'
 
-class Sobre extends Component {
+class About extends Component {
  render() {
     return (
         <div className="App">
@@ -19,4 +19,4 @@ class Sobre extends Component {
  }
 
 }
-export default Sobre;
+export default About;
