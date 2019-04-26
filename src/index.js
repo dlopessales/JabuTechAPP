@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/index';
+
 import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 import App from './App';
-import About from './About';
-import Main from './Main';
-import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import User from './User';
+import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
+  <Provider store={ store }>
     <BrowserRouter>
-        <Switch>
-            <Route path="/" exact={true} component={App} />
-            <Route path="/about" component={About} />
-            <Route path="/main" component={Main} />
-        </Switch>
-    </ BrowserRouter>
-    , document.getElementById('root'));
-
-serviceWorker.unregister();
-
-
+      <User /> 
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root')
+);
+registerServiceWorker();

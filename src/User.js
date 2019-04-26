@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
-import ContactListPage from './pages/contact-list-page';
-import ContactFormPage from './pages/contact-form-page';
+import UserListPage from './pages/user-list-page';
+import UserFormPage from './pages/user-form-page';
 
 
-class App extends Component {
+class User extends Component {
   render() {
     return (
       <div>
@@ -14,23 +14,23 @@ class App extends Component {
 
           <NavLink className="item" 
             activeClassName="active" 
-            exact to="/">Contacts List
+            exact to="/">Users List
           </NavLink>
 
           <NavLink className="item" 
             activeClassName="active" 
-            exact to="/contacts/new">Add Contact
+            exact to="/users/new">Add User
           </NavLink>
           
           </div>
 
-          <Route exact path="/" component={ContactListPage}/>
-          <Route path="/contacts/new" component={ContactFormPage}/>
-          <Route path="/contacts/edit/:_id" component={ContactFormPage}/>
+          <Route exact path="/" component={UserListPage}/>
+          <Route path="/users/new" component={UserFormPage}/>
+          <Route path="/users/edit/:_id" component={UserFormPage}/>
         </Container>
       </div>
     );
   }
 }
 
-export default App;
+export default User;
