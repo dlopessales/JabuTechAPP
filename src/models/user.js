@@ -118,8 +118,6 @@ const user = {
 
   },
 
-
-
   effects: (dispatch) => ({
     fetchUsers() {
       return client.get(url)
